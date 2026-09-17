@@ -1,4 +1,4 @@
-Phase: implementing. Slice 2 of 4: auth (scaffold done+committed).
-Files: backend/src/{types/index.ts,middleware/validate.ts,services/auth.service.ts,routes/auth.routes.ts,__tests__/auth.service.test.ts}, frontend/{lib/api.ts,context/BookingContext.tsx,components/FormField.tsx,app/login/page.tsx,app/login/otp/page.tsx,src/__tests__/LoginPage.test.tsx,e2e/auth.spec.ts}
-Verify: cd backend && node node_modules/vitest/vitest.mjs run src/__tests__/auth.service.test.ts
-Note: mount auth router in backend/src/app.ts. Next after auth: catalog slice.
+Phase: implementing. Slice 3 of 4: catalog (scaffold+auth done+committed).
+Files: backend/src/{db/database.ts,db/seed.ts,services/movies.service.ts,services/theatres.service.ts,routes/movies.routes.ts,routes/theatres.routes.ts,__tests__/api.test.ts}, frontend/{components/Card.tsx,components/MovieCard.tsx,components/TheatreCard.tsx,app/movies/page.tsx,app/movies/[id]/page.tsx,src/__tests__/MoviesPage.test.tsx,e2e/booking.spec.ts}
+Verify: cd backend && node node_modules/vitest/vitest.mjs run src/__tests__/api.test.ts
+Note: mount movies+theatres routers in backend/src/app.ts. Next after catalog: booking slice.

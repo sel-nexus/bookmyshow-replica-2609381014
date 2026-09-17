@@ -3,6 +3,9 @@ import cors from "cors";
 import { config } from "./config";
 import { errorHandler } from "./middleware/errorHandler";
 import { authRouter } from "./routes/auth.routes";
+import { moviesRouter } from "./routes/movies.routes";
+import { theatresRouter } from "./routes/theatres.routes";
+import { seedDatabase } from "./db/seed";
 
 /**
  * Build and configure the Express application.
@@ -15,6 +18,9 @@ import { authRouter } from "./routes/auth.routes";
  *   A configured Express application.
  */
 export function createApp(): Express {
+  // Pre-seed the catalog (movies + theatres) idempotently on startup.
+  seedDatabase();
+
   const app = express();
 
   app.use(express.json());
@@ -28,6 +34,8 @@ export function createApp(): Express {
 
   // Feature routers.
   app.use("/api/auth", authRouter);
+  app.use("/api/movies", moviesRouter);
+  app.use("/api/theatres", theatresRouter);
 
   app.use(errorHandler);
 
