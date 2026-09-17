@@ -5,9 +5,14 @@ import {
   useContext,
   useState,
   useCallback,
+  useEffect,
   ReactNode,
 } from "react";
 import type { Movie, Theatre, BookingConfirmation } from "@/lib/api";
+
+/** sessionStorage keys for persisting the auth session across reloads. */
+const STORAGE_MOBILE = "bms_mobile";
+const STORAGE_TOKEN = "bms_token";
 
 /** Shape of the in-progress booking held in context. */
 export interface BookingDraft {
@@ -63,9 +68,33 @@ export function BookingProvider({ children }: { children: ReactNode }) {
   const [confirmation, setConfirmationState] =
     useState<BookingConfirmation | null>(null);
 
+  // Rehydrate the persisted session after mount (client-only, so SSR and the
+  // first client render agree on the empty initial state).
+  useEffect(() => {
+    try {
+      const savedMobile = window.sessionStorage.getItem(STORAGE_MOBILE);
+      const savedToken = window.sessionStorage.getItem(STORAGE_TOKEN);
+      if (savedMobile) setMobile(savedMobile);
+      if (savedToken) setToken(savedToken);
+    } catch {
+      // sessionStorage unavailable (e.g. privacy mode) — stay logged out.
+    }
+  }, []);
+
   const setSession = useCallback((nextMobile: string, nextToken: string) => {
     setMobile(nextMobile);
     setToken(nextToken);
+    try {
+      if (nextToken) {
+        window.sessionStorage.setItem(STORAGE_MOBILE, nextMobile);
+        window.sessionStorage.setItem(STORAGE_TOKEN, nextToken);
+      } else {
+        window.sessionStorage.removeItem(STORAGE_MOBILE);
+        window.sessionStorage.removeItem(STORAGE_TOKEN);
+      }
+    } catch {
+      // sessionStorage unavailable — the in-memory session still works.
+    }
   }, []);
 
   const setDraft = useCallback((partial: Partial<BookingDraft>) => {
@@ -81,6 +110,12 @@ export function BookingProvider({ children }: { children: ReactNode }) {
     setToken("");
     setDraftState(initialDraft);
     setConfirmationState(null);
+    try {
+      window.sessionStorage.removeItem(STORAGE_MOBILE);
+      window.sessionStorage.removeItem(STORAGE_TOKEN);
+    } catch {
+      // sessionStorage unavailable — nothing to clear.
+    }
   }, []);
 
   const value: BookingContextValue = {

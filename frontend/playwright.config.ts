@@ -34,7 +34,8 @@ export default defineConfig({
         PORT: "8000",
         CORS_ORIGIN: "http://localhost:3000",
         JWT_SECRET: "e2e-secret",
-        DATABASE_PATH: "./data/e2e.db",
+        // SQLite file lives on the native Linux FS, not the workspace mount.
+        DATABASE_PATH: "/tmp/bookmyshow-e2e.db",
         NODE_ENV: "test",
       },
     },
@@ -46,6 +47,10 @@ export default defineConfig({
       reuseExistingServer: true,
       env: {
         BACKEND_URL: "http://localhost:8000",
+        // Point the browser directly at the backend so POST bodies are not
+        // subject to dev-proxy streaming quirks. Dev/test only — production
+        // leaves this empty for same-origin co-hosted deployment.
+        NEXT_PUBLIC_API_URL: "http://localhost:8000",
         NEXT_TELEMETRY_DISABLED: "1",
       },
     },

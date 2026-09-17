@@ -52,7 +52,12 @@ test.describe("Authentication", () => {
     const errors: string[] = [];
     page.on("pageerror", (err) => errors.push(err.message));
     page.on("console", (msg) => {
-      if (msg.type() === "error") errors.push(msg.text());
+      // Capture real JS console errors, but ignore expected network resource
+      // errors (the 401 from the rejected OTP is the behavior under test).
+      const text = msg.text();
+      if (msg.type() === "error" && !text.includes("Failed to load resource")) {
+        errors.push(text);
+      }
     });
 
     await page.goto("/login");

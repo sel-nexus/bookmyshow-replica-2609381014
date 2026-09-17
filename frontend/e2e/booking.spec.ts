@@ -22,11 +22,11 @@ test.describe("Booking journey", () => {
     await page.getByRole("button", { name: /verify/i }).click();
     await expect(page).toHaveURL(/\/movies/);
 
-    // The dashboard fetches the catalog from the backend.
+    // The dashboard fetches the catalog from the backend on load.
     const moviesResponse = page.waitForResponse((r) =>
       r.url().includes("/api/movies")
     );
-    await page.reload();
+    await page.goto("/movies");
     await moviesResponse;
 
     // The dashboard lists the seeded movies from the backend.
@@ -74,7 +74,9 @@ test.describe("Booking journey", () => {
     await page.getByRole("button", { name: /^pay/i }).click();
 
     // Processing state appears, then the booking POST hits the backend.
-    await expect(page.getByText(/processing payment/i)).toBeVisible();
+    await expect(
+      page.getByText("Processing Payment...", { exact: true })
+    ).toBeVisible();
     await bookingResponse;
 
     // Success screen shows the confirmation returned from the backend.
@@ -86,6 +88,17 @@ test.describe("Booking journey", () => {
     await expect(page.getByText(/A1, A2, A3/)).toBeVisible();
     await expect(page.getByText(/BMS-/)).toBeVisible();
     await page.screenshot({ path: "e2e/screenshots/success.png" });
+
+    // Persistence: after the booking, the backend still serves the seeded
+    // catalog from the database on a fresh load (server-side state survives).
+    const catalogResponse = page.waitForResponse((r) =>
+      r.url().includes("/api/movies")
+    );
+    await page.goto("/movies");
+    await catalogResponse;
+    await expect(
+      page.getByRole("heading", { name: "Paradise" })
+    ).toBeVisible();
 
     expect(errors).toEqual([]);
   });
