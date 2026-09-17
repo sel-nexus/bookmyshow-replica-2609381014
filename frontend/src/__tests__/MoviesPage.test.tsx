@@ -54,6 +54,14 @@ describe("MoviesPage", () => {
     ).toBeInTheDocument();
   });
 
+  it("renders a defined empty state when no movies are returned", async () => {
+    vi.mocked(getMovies).mockResolvedValue({ movies: [] });
+    renderMovies();
+    expect(
+      await screen.findByText(/no movies showing right now/i)
+    ).toBeInTheDocument();
+  });
+
   it("links each movie to its theatre-selection page", async () => {
     vi.mocked(getMovies).mockResolvedValue({ movies: MOVIES });
     renderMovies();

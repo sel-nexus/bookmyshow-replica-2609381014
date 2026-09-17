@@ -250,8 +250,9 @@ describe("Security boundaries", () => {
       .set("Authorization", `Bearer ${token}`)
       .set("Content-Type", "application/json")
       .send("{ not valid json ");
-    // Express's JSON parser produces a 400; the error envelope must not leak internals.
-    expect([400, 500]).toContain(res.status);
+    // Express's JSON parser rejects malformed bodies with exactly 400, and the
+    // error envelope must not leak internals.
+    expect(res.status).toBe(400);
     expect(JSON.stringify(res.body)).not.toMatch(/at Object|node_modules/);
   });
 
@@ -261,8 +262,10 @@ describe("Security boundaries", () => {
       .post("/api/bookings")
       .set("Authorization", `Bearer ${token}`)
       .send({ ...VALID_BOOKING, seats: ["<script>alert(1)</script>"] });
-    // The API returns JSON; the value is stored/returned as a plain string.
-    expect([201, 400]).toContain(res.status);
+    // The value is stored as an inert string and returned as JSON (201), never
+    // reflected as executable HTML.
+    expect(res.status).toBe(201);
     expect(res.headers["content-type"]).toMatch(/application\/json/);
+    expect(res.body.booking.seats[0]).toBe("<script>alert(1)</script>");
   });
 });

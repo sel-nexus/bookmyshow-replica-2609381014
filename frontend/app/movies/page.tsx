@@ -56,6 +56,15 @@ export default function MoviesPage() {
         <p role="alert" className="mt-10 text-error">
           {error}
         </p>
+      ) : movies.length === 0 ? (
+        <div className="mt-10 rounded-card border border-border bg-surface p-12 text-center">
+          <p className="text-lg font-semibold text-foreground">
+            No movies showing right now
+          </p>
+          <p className="mt-2 text-sm text-foreground-muted">
+            Check back soon — new releases are added regularly.
+          </p>
+        </div>
       ) : (
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {movies.map((movie) => (
