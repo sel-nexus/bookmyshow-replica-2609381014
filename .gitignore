@@ -25,6 +25,8 @@ graphify-out/cache/
 graphify-out/cost.json
 **/graphify-out/**/cache/
 **/graphify-out/graphify-out/
+# Engine internals
+.engine/
 # SDLC pipeline working files (read from workspace, never from git)
 PLAN.md
 todos.yaml
