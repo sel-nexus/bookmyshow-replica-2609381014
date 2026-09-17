@@ -406,6 +406,14 @@
       "community": 1
     },
     {
+      "id": "backend_src_tests_api_test",
+      "label": "api.test.ts",
+      "file_type": "code",
+      "source_file": "backend/src/__tests__/api.test.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
       "id": "backend_src_tests_auth_service_test",
       "label": "auth.service.test.ts",
       "file_type": "code",
@@ -427,7 +435,7 @@
       "label": "createApp()",
       "file_type": "code",
       "source_file": "backend/src/app.ts",
-      "source_location": "L17",
+      "source_location": "L20",
       "_callable": true,
       "_origin": "ast",
       "community": 9
@@ -480,6 +488,74 @@
       "source_location": "L65",
       "_origin": "ast",
       "community": 9
+    },
+    {
+      "id": "backend_src_db_database",
+      "label": "database.ts",
+      "file_type": "code",
+      "source_file": "backend/src/db/database.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_db_database_getdb",
+      "label": "getDb()",
+      "file_type": "code",
+      "source_file": "backend/src/db/database.ts",
+      "source_location": "L22",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_db_database_initschema",
+      "label": "initSchema()",
+      "file_type": "code",
+      "source_file": "backend/src/db/database.ts",
+      "source_location": "L43",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_db_database_closedb",
+      "label": "closeDb()",
+      "file_type": "code",
+      "source_file": "backend/src/db/database.ts",
+      "source_location": "L79",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_db_seed",
+      "label": "seed.ts",
+      "file_type": "code",
+      "source_file": "backend/src/db/seed.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_db_seed_movies",
+      "label": "MOVIES",
+      "file_type": "code",
+      "source_file": "backend/src/db/seed.ts",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_db_seed_theatres",
+      "label": "THEATRES",
+      "file_type": "code",
+      "source_file": "backend/src/db/seed.ts",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_db_seed_seeddatabase",
+      "label": "seedDatabase()",
+      "file_type": "code",
+      "source_file": "backend/src/db/seed.ts",
+      "source_location": "L28",
+      "_callable": true,
+      "_origin": "ast"
     },
     {
       "id": "backend_src_index",
@@ -569,6 +645,38 @@
       "_origin": "ast"
     },
     {
+      "id": "backend_src_routes_movies_routes",
+      "label": "movies.routes.ts",
+      "file_type": "code",
+      "source_file": "backend/src/routes/movies.routes.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_routes_movies_routes_moviesrouter",
+      "label": "moviesRouter",
+      "file_type": "code",
+      "source_file": "backend/src/routes/movies.routes.ts",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_routes_theatres_routes",
+      "label": "theatres.routes.ts",
+      "file_type": "code",
+      "source_file": "backend/src/routes/theatres.routes.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_routes_theatres_routes_theatresrouter",
+      "label": "theatresRouter",
+      "file_type": "code",
+      "source_file": "backend/src/routes/theatres.routes.ts",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
       "id": "backend_src_services_auth_service",
       "label": "auth.service.ts",
       "file_type": "code",
@@ -609,6 +717,87 @@
       "file_type": "code",
       "source_file": "backend/src/services/auth.service.ts",
       "source_location": "L40",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_services_movies_service",
+      "label": "movies.service.ts",
+      "file_type": "code",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_services_movies_service_moviesservice",
+      "label": "MoviesService",
+      "file_type": "code",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L7",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_services_movies_service_moviesservice_listmovies",
+      "label": ".listMovies()",
+      "file_type": "code",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L14",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_services_movies_service_moviesservice_getmovie",
+      "label": ".getMovie()",
+      "file_type": "code",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L30",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_services_movies_service_moviesservice_listtheatresformovie",
+      "label": ".listTheatresForMovie()",
+      "file_type": "code",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L46",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_services_theatres_service",
+      "label": "theatres.service.ts",
+      "file_type": "code",
+      "source_file": "backend/src/services/theatres.service.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_services_theatres_service_theatresservice",
+      "label": "TheatresService",
+      "file_type": "code",
+      "source_file": "backend/src/services/theatres.service.ts",
+      "source_location": "L7",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_services_theatres_service_theatresservice_listtheatres",
+      "label": ".listTheatres()",
+      "file_type": "code",
+      "source_file": "backend/src/services/theatres.service.ts",
+      "source_location": "L14",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "backend_src_services_theatres_service_theatresservice_gettheatre",
+      "label": ".getTheatre()",
+      "file_type": "code",
+      "source_file": "backend/src/services/theatres.service.ts",
+      "source_location": "L30",
       "_callable": true,
       "_origin": "ast"
     },
@@ -932,6 +1121,40 @@
       "_origin": "ast"
     },
     {
+      "id": "frontend_app_movies_id_page",
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_app_movies_id_page_movietheatrespage",
+      "label": "MovieTheatresPage()",
+      "file_type": "code",
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L21",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_app_movies_page",
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "frontend/app/movies/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_app_movies_page_moviespage",
+      "label": "MoviesPage()",
+      "file_type": "code",
+      "source_file": "frontend/app/movies/page.tsx",
+      "source_location": "L12",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_app_page",
       "label": "page.tsx",
       "file_type": "code",
@@ -1020,6 +1243,33 @@
       "community": 11
     },
     {
+      "id": "frontend_components_card",
+      "label": "Card.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/Card.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_card_cardprops",
+      "label": "CardProps",
+      "file_type": "code",
+      "source_file": "frontend/components/Card.tsx",
+      "source_location": "L3",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_card_card",
+      "label": "Card()",
+      "file_type": "code",
+      "source_file": "frontend/components/Card.tsx",
+      "source_location": "L16",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "frontend_components_formfield",
       "label": "FormField.tsx",
       "file_type": "code",
@@ -1064,6 +1314,40 @@
       "_callable": true,
       "_origin": "ast",
       "community": 13
+    },
+    {
+      "id": "frontend_components_moviecard",
+      "label": "MovieCard.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/MovieCard.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_moviecard_moviecard",
+      "label": "MovieCard()",
+      "file_type": "code",
+      "source_file": "frontend/components/MovieCard.tsx",
+      "source_location": "L13",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_theatrecard",
+      "label": "TheatreCard.tsx",
+      "file_type": "code",
+      "source_file": "frontend/components/TheatreCard.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_components_theatrecard_theatrecard",
+      "label": "TheatreCard()",
+      "file_type": "code",
+      "source_file": "frontend/components/TheatreCard.tsx",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast"
     },
     {
       "id": "frontend_context_bookingcontext",
@@ -1132,6 +1416,14 @@
       "label": "auth.spec.ts",
       "file_type": "code",
       "source_file": "frontend/e2e/auth.spec.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_e2e_booking_spec",
+      "label": "booking.spec.ts",
+      "file_type": "code",
+      "source_file": "frontend/e2e/booking.spec.ts",
       "source_location": "L1",
       "_origin": "ast"
     },
@@ -1726,6 +2018,31 @@
       "file_type": "code",
       "source_file": "frontend/src/__tests__/LoginPage.test.tsx",
       "source_location": "L24",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_tests_moviespage_test",
+      "label": "MoviesPage.test.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/__tests__/MoviesPage.test.tsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_tests_moviespage_test_movies",
+      "label": "MOVIES",
+      "file_type": "code",
+      "source_file": "frontend/src/__tests__/MoviesPage.test.tsx",
+      "source_location": "L17",
+      "_origin": "ast"
+    },
+    {
+      "id": "frontend_src_tests_moviespage_test_rendermovies",
+      "label": "renderMovies()",
+      "file_type": "code",
+      "source_file": "frontend/src/__tests__/MoviesPage.test.tsx",
+      "source_location": "L23",
       "_callable": true,
       "_origin": "ast"
     },
@@ -2573,11 +2890,77 @@
     },
     {
       "source": "backend_src_app",
+      "target": "backend_src_routes_movies_routes",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/app.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_app",
+      "target": "backend_src_routes_movies_routes_moviesrouter",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/app.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_app",
+      "target": "backend_src_routes_theatres_routes",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/app.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_app",
+      "target": "backend_src_routes_theatres_routes_theatresrouter",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/app.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_app",
+      "target": "backend_src_db_seed",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/app.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_app",
+      "target": "backend_src_db_seed_seeddatabase",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/app.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_app",
       "target": "backend_src_app_createapp",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/src/app.ts",
-      "source_location": "L17",
+      "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -2629,6 +3012,121 @@
       "confidence": "EXTRACTED",
       "source_file": "backend/src/config.ts",
       "source_location": "L53",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_db_database",
+      "target": "backend_src_config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/db/database.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_db_database",
+      "target": "backend_src_config_config",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/db/database.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_db_database",
+      "target": "backend_src_db_database_getdb",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/db/database.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_db_database",
+      "target": "backend_src_db_database_initschema",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/db/database.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_db_database",
+      "target": "backend_src_db_database_closedb",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/db/database.ts",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_db_database_getdb",
+      "target": "backend_src_db_database_initschema",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/db/database.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_db_seed",
+      "target": "backend_src_db_database",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/db/seed.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_db_seed",
+      "target": "backend_src_db_database_getdb",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/db/seed.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_db_seed",
+      "target": "backend_src_db_seed_movies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/db/seed.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_db_seed",
+      "target": "backend_src_db_seed_theatres",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/db/seed.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_db_seed",
+      "target": "backend_src_db_seed_seeddatabase",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/db/seed.ts",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -2781,6 +3279,70 @@
       "_origin": "ast"
     },
     {
+      "source": "backend_src_routes_movies_routes",
+      "target": "backend_src_services_movies_service",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/routes/movies.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_routes_movies_routes",
+      "target": "backend_src_services_movies_service_moviesservice",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/routes/movies.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_routes_movies_routes",
+      "target": "backend_src_routes_movies_routes_moviesrouter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/routes/movies.routes.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_routes_theatres_routes",
+      "target": "backend_src_services_theatres_service",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/routes/theatres.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_routes_theatres_routes",
+      "target": "backend_src_services_theatres_service_theatresservice",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/routes/theatres.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_routes_theatres_routes",
+      "target": "backend_src_routes_theatres_routes_theatresrouter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/routes/theatres.routes.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "backend_src_services_auth_service",
       "target": "backend_src_config",
       "relation": "imports_from",
@@ -2860,6 +3422,195 @@
       "confidence": "EXTRACTED",
       "source_file": "backend/src/services/auth.service.ts",
       "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_movies_service",
+      "target": "backend_src_db_database",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_movies_service",
+      "target": "backend_src_db_database_getdb",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_movies_service",
+      "target": "backend_src_types_index",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_movies_service",
+      "target": "backend_src_types_index_movie",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_movies_service",
+      "target": "backend_src_types_index_theatre",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_movies_service",
+      "target": "backend_src_services_movies_service_moviesservice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_movies_service_moviesservice",
+      "target": "backend_src_services_movies_service_moviesservice_listmovies",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_movies_service_moviesservice",
+      "target": "backend_src_services_movies_service_moviesservice_getmovie",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_movies_service_moviesservice",
+      "target": "backend_src_services_movies_service_moviesservice_listtheatresformovie",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_movies_service",
+      "target": "backend_src_services_movies_service_moviesservice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_theatres_service",
+      "target": "backend_src_db_database",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/theatres.service.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_theatres_service",
+      "target": "backend_src_db_database_getdb",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/theatres.service.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_theatres_service",
+      "target": "backend_src_types_index",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/theatres.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_theatres_service",
+      "target": "backend_src_types_index_theatre",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/theatres.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_theatres_service",
+      "target": "backend_src_services_theatres_service_theatresservice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/theatres.service.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_theatres_service_theatresservice",
+      "target": "backend_src_services_theatres_service_theatresservice_listtheatres",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/theatres.service.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_theatres_service_theatresservice",
+      "target": "backend_src_services_theatres_service_theatresservice_gettheatre",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/theatres.service.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_theatres_service",
+      "target": "backend_src_services_theatres_service_theatresservice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/theatres.service.ts",
+      "source_location": "L38",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -3411,6 +4162,202 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_app_movies_id_page",
+      "target": "frontend_lib_api",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_id_page",
+      "target": "frontend_lib_api_getmovies",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_id_page",
+      "target": "frontend_lib_api_getmovietheatres",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_id_page",
+      "target": "frontend_lib_api_movie",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_id_page",
+      "target": "frontend_lib_api_theatre",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_id_page",
+      "target": "frontend_context_bookingcontext",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_id_page",
+      "target": "frontend_context_bookingcontext_usebooking",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_id_page",
+      "target": "frontend_components_theatrecard",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_id_page",
+      "target": "frontend_components_theatrecard_theatrecard",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_id_page",
+      "target": "frontend_components_button",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_id_page",
+      "target": "frontend_components_button_button",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_id_page",
+      "target": "frontend_app_movies_id_page_movietheatrespage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_page",
+      "target": "frontend_lib_api",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_page",
+      "target": "frontend_lib_api_getmovies",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_page",
+      "target": "frontend_lib_api_movie",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_page",
+      "target": "frontend_components_moviecard",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_page",
+      "target": "frontend_components_moviecard_moviecard",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_page",
+      "target": "frontend_app_movies_page_moviespage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/movies/page.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_app_page",
       "target": "frontend_app_page_landingpage",
       "relation": "contains",
@@ -3481,6 +4428,26 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_components_card",
+      "target": "frontend_components_card_cardprops",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Card.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_card",
+      "target": "frontend_components_card_card",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/Card.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_components_formfield",
       "target": "frontend_components_formfield_formfieldprops",
       "relation": "contains",
@@ -3507,6 +4474,114 @@
       "confidence": "EXTRACTED",
       "source_file": "frontend/components/Header.tsx",
       "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_moviecard",
+      "target": "frontend_lib_api",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/MovieCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_moviecard",
+      "target": "frontend_lib_api_movie",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/MovieCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_moviecard",
+      "target": "frontend_components_card",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/MovieCard.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_moviecard",
+      "target": "frontend_components_card_card",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/MovieCard.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_moviecard",
+      "target": "frontend_components_moviecard_moviecard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/MovieCard.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_theatrecard",
+      "target": "frontend_lib_api",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/TheatreCard.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_theatrecard",
+      "target": "frontend_lib_api_theatre",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/TheatreCard.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_theatrecard",
+      "target": "frontend_components_card",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/TheatreCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_theatrecard",
+      "target": "frontend_components_card_card",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/TheatreCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_components_theatrecard",
+      "target": "frontend_components_theatrecard_theatrecard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/components/TheatreCard.tsx",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4352,6 +5427,81 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_src_tests_moviespage_test",
+      "target": "frontend_app_movies_page",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/__tests__/MoviesPage.test.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_tests_moviespage_test",
+      "target": "frontend_context_bookingcontext",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/__tests__/MoviesPage.test.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_tests_moviespage_test",
+      "target": "frontend_context_bookingcontext_bookingprovider",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/__tests__/MoviesPage.test.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_tests_moviespage_test",
+      "target": "frontend_lib_api",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/__tests__/MoviesPage.test.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_tests_moviespage_test",
+      "target": "frontend_lib_api_getmovies",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/__tests__/MoviesPage.test.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_tests_moviespage_test",
+      "target": "frontend_src_tests_moviespage_test_movies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/__tests__/MoviesPage.test.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_src_tests_moviespage_test",
+      "target": "frontend_src_tests_moviespage_test_rendermovies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/__tests__/MoviesPage.test.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "frontend_tailwind_config",
       "target": "frontend_tailwind_config_config",
       "relation": "contains",
@@ -4651,6 +5801,17 @@
       "_origin": "ast"
     },
     {
+      "source": "frontend_src_tests_moviespage_test",
+      "target": "frontend_app_movies_page_moviespage",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/__tests__/MoviesPage.test.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "backend_src_index_main",
       "target": "backend_src_app_createapp",
       "relation": "calls",
@@ -4658,6 +5819,61 @@
       "confidence": "EXTRACTED",
       "source_file": "backend/src/index.ts",
       "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_movies_service_moviesservice_listmovies",
+      "target": "backend_src_types_index_movie",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_movies_service_moviesservice_getmovie",
+      "target": "backend_src_types_index_movie",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_movies_service_moviesservice_listtheatresformovie",
+      "target": "backend_src_types_index_theatre",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_theatres_service_theatresservice_listtheatres",
+      "target": "backend_src_types_index_theatre",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/theatres.service.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_theatres_service_theatresservice_gettheatre",
+      "target": "backend_src_types_index_theatre",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/services/theatres.service.ts",
+      "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4696,13 +5912,97 @@
     },
     {
       "source": "backend_src_app_createapp",
+      "target": "backend_src_db_seed_seeddatabase",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/app.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_app_createapp",
       "target": "backend_src_middleware_errorhandler_errorhandler",
       "relation": "indirect_call",
       "context": "argument",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "backend/src/app.ts",
-      "source_location": "L32",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_db_seed_seeddatabase",
+      "target": "backend_src_db_database_getdb",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/db/seed.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_movies_service_moviesservice_listmovies",
+      "target": "backend_src_db_database_getdb",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_movies_service_moviesservice_getmovie",
+      "target": "backend_src_db_database_getdb",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_movies_service_moviesservice_listtheatresformovie",
+      "target": "backend_src_db_database_getdb",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/services/movies.service.ts",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_theatres_service_theatresservice_listtheatres",
+      "target": "backend_src_db_database_getdb",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/services/theatres.service.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "backend_src_services_theatres_service_theatresservice_gettheatre",
+      "target": "backend_src_db_database_getdb",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/src/services/theatres.service.ts",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4729,13 +6029,61 @@
       "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_id_page_movietheatrespage",
+      "target": "frontend_context_bookingcontext_usebooking",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_id_page_movietheatrespage",
+      "target": "frontend_lib_api_getmovies",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_id_page_movietheatrespage",
+      "target": "frontend_lib_api_getmovietheatres",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/app/movies/[id]/page.tsx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "frontend_app_movies_page_moviespage",
+      "target": "frontend_lib_api_getmovies",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/app/movies/page.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
     }
   ],
   "metadata": {
-    "built_at": "2026-09-17T10:13:45.870796+00:00",
+    "built_at": "2026-09-17T10:22:27.225441+00:00",
     "version": "graph_update-v1",
     "codebase_root": "C:\\artifacts-v2\\T0132PcJVCRTV000417092609381014\\developer",
     "force": true,
-    "files_scanned": 32
+    "files_scanned": 46
   }
 }

@@ -5,6 +5,7 @@ import { errorHandler } from "./middleware/errorHandler";
 import { authRouter } from "./routes/auth.routes";
 import { moviesRouter } from "./routes/movies.routes";
 import { theatresRouter } from "./routes/theatres.routes";
+import { bookingsRouter } from "./routes/bookings.routes";
 import { seedDatabase } from "./db/seed";
 
 /**
@@ -36,6 +37,7 @@ export function createApp(): Express {
   app.use("/api/auth", authRouter);
   app.use("/api/movies", moviesRouter);
   app.use("/api/theatres", theatresRouter);
+  app.use("/api/bookings", bookingsRouter);
 
   app.use(errorHandler);
 
