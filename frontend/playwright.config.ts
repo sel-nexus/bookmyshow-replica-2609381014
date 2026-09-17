@@ -47,10 +47,6 @@ export default defineConfig({
       reuseExistingServer: true,
       env: {
         BACKEND_URL: "http://localhost:8000",
-        // Point the browser directly at the backend so POST bodies are not
-        // subject to dev-proxy streaming quirks. Dev/test only — production
-        // leaves this empty for same-origin co-hosted deployment.
-        NEXT_PUBLIC_API_URL: "http://localhost:8000",
         NEXT_TELEMETRY_DISABLED: "1",
       },
     },
