@@ -2,6 +2,7 @@ import express, { Express, Request, Response } from "express";
 import cors from "cors";
 import { config } from "./config";
 import { errorHandler } from "./middleware/errorHandler";
+import { authRouter } from "./routes/auth.routes";
 
 /**
  * Build and configure the Express application.
@@ -25,7 +26,8 @@ export function createApp(): Express {
     res.status(200).json({ status: "ok" });
   });
 
-  // Feature routers are mounted here by later slices.
+  // Feature routers.
+  app.use("/api/auth", authRouter);
 
   app.use(errorHandler);
 

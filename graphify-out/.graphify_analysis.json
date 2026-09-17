@@ -1,0 +1,375 @@
+{
+  "communities": {
+    "0": [
+      "autoprefixer",
+      "frontend_package_devdependencies",
+      "frontend_package_devdependencies_autoprefixer",
+      "frontend_package_devdependencies_jsdom",
+      "frontend_package_devdependencies_postcss",
+      "frontend_package_devdependencies_tailwindcss",
+      "frontend_package_devdependencies_testing_library_jest_dom",
+      "frontend_package_devdependencies_testing_library_react",
+      "frontend_package_devdependencies_testing_library_user_event",
+      "frontend_package_devdependencies_types_react",
+      "frontend_package_devdependencies_types_react_dom",
+      "frontend_package_devdependencies_vitejs_plugin_react",
+      "frontend_package_devdependencies_vitest",
+      "frontend_package_json_vitest",
+      "jsdom",
+      "postcss",
+      "tailwindcss",
+      "testing_library_jest_dom",
+      "testing_library_react",
+      "testing_library_user_event",
+      "types_react",
+      "types_react_dom",
+      "vitejs_plugin_react"
+    ],
+    "1": [
+      "backend_package_devdependencies",
+      "backend_package_devdependencies_supertest",
+      "backend_package_devdependencies_ts_node_dev",
+      "backend_package_devdependencies_types_better_sqlite3",
+      "backend_package_devdependencies_types_cors",
+      "backend_package_devdependencies_types_express",
+      "backend_package_devdependencies_types_jsonwebtoken",
+      "backend_package_devdependencies_types_node",
+      "backend_package_devdependencies_types_supertest",
+      "backend_package_devdependencies_typescript",
+      "backend_package_devdependencies_vitest",
+      "backend_package_json_types_node",
+      "backend_package_json_typescript",
+      "backend_package_json_vitest",
+      "frontend_package_devdependencies_types_node",
+      "frontend_package_devdependencies_typescript",
+      "supertest",
+      "ts_node_dev",
+      "types_better_sqlite3",
+      "types_cors",
+      "types_express",
+      "types_jsonwebtoken",
+      "types_supertest"
+    ],
+    "2": [
+      "frontend_tsconfig_compileroptions",
+      "frontend_tsconfig_compileroptions_allowjs",
+      "frontend_tsconfig_compileroptions_esmoduleinterop",
+      "frontend_tsconfig_compileroptions_forceconsistentcasinginfilenames",
+      "frontend_tsconfig_compileroptions_incremental",
+      "frontend_tsconfig_compileroptions_isolatedmodules",
+      "frontend_tsconfig_compileroptions_jsx",
+      "frontend_tsconfig_compileroptions_lib",
+      "frontend_tsconfig_compileroptions_module",
+      "frontend_tsconfig_compileroptions_moduleresolution",
+      "frontend_tsconfig_compileroptions_noemit",
+      "frontend_tsconfig_compileroptions_paths",
+      "frontend_tsconfig_compileroptions_plugins",
+      "frontend_tsconfig_compileroptions_resolvejsonmodule",
+      "frontend_tsconfig_compileroptions_skiplibcheck",
+      "frontend_tsconfig_compileroptions_strict",
+      "frontend_tsconfig_compileroptions_target",
+      "ref_dom",
+      "ref_dom_iterable",
+      "ref_esnext"
+    ],
+    "3": [
+      "frontend_package",
+      "frontend_package_dependencies",
+      "frontend_package_dependencies_next",
+      "frontend_package_dependencies_react",
+      "frontend_package_dependencies_react_dom",
+      "frontend_package_description",
+      "frontend_package_name",
+      "frontend_package_private",
+      "frontend_package_scripts",
+      "frontend_package_scripts_build",
+      "frontend_package_scripts_dev",
+      "frontend_package_scripts_start",
+      "frontend_package_scripts_test",
+      "frontend_package_version",
+      "next",
+      "react",
+      "react_dom"
+    ],
+    "4": [
+      "_engine_memory_progress_summary_scaffold_status",
+      "plan_api_auth_login",
+      "plan_api_auth_verify",
+      "plan_api_bookings",
+      "plan_api_health",
+      "plan_booking_model",
+      "plan_dummy_payment",
+      "plan_hardcoded_otp",
+      "plan_slice_auth",
+      "plan_slice_booking",
+      "plan_slice_scaffold",
+      "todos_auth",
+      "todos_booking",
+      "todos_scaffold"
+    ],
+    "5": [
+      "backend_tsconfig",
+      "backend_tsconfig_exclude",
+      "backend_tsconfig_include",
+      "backend_tsconfig_json_ref_node_modules",
+      "frontend_tsconfig",
+      "frontend_tsconfig_exclude",
+      "frontend_tsconfig_include",
+      "ref_dist",
+      "ref_next_env_d_ts",
+      "ref_next_types_ts",
+      "ref_src_tests",
+      "ref_src_ts",
+      "ref_ts",
+      "ref_tsx"
+    ],
+    "6": [
+      "backend_tsconfig_compileroptions",
+      "backend_tsconfig_compileroptions_downleveliteration",
+      "backend_tsconfig_compileroptions_esmoduleinterop",
+      "backend_tsconfig_compileroptions_forceconsistentcasinginfilenames",
+      "backend_tsconfig_compileroptions_module",
+      "backend_tsconfig_compileroptions_moduleresolution",
+      "backend_tsconfig_compileroptions_outdir",
+      "backend_tsconfig_compileroptions_resolvejsonmodule",
+      "backend_tsconfig_compileroptions_rootdir",
+      "backend_tsconfig_compileroptions_skiplibcheck",
+      "backend_tsconfig_compileroptions_strict",
+      "backend_tsconfig_compileroptions_target",
+      "backend_tsconfig_compileroptions_types",
+      "ref_node"
+    ],
+    "7": [
+      "backend_package_dependencies",
+      "backend_package_dependencies_better_sqlite3",
+      "backend_package_dependencies_cors",
+      "backend_package_dependencies_dotenv",
+      "backend_package_dependencies_express",
+      "backend_package_dependencies_jsonwebtoken",
+      "backend_package_dependencies_zod",
+      "better_sqlite3",
+      "cors",
+      "dotenv",
+      "express",
+      "jsonwebtoken",
+      "zod"
+    ],
+    "8": [
+      "backend_package",
+      "backend_package_description",
+      "backend_package_main",
+      "backend_package_name",
+      "backend_package_private",
+      "backend_package_scripts",
+      "backend_package_scripts_build",
+      "backend_package_scripts_dev",
+      "backend_package_scripts_start",
+      "backend_package_scripts_test",
+      "backend_package_version"
+    ],
+    "9": [
+      "backend_src_app",
+      "backend_src_app_createapp",
+      "backend_src_config",
+      "backend_src_config_appconfig",
+      "backend_src_config_config",
+      "backend_src_config_loadconfig",
+      "backend_src_config_requireenv",
+      "backend_src_index",
+      "backend_src_index_main",
+      "backend_src_middleware_errorhandler",
+      "backend_src_middleware_errorhandler_errorhandler"
+    ],
+    "10": [
+      "docker_compose_backend_service",
+      "docker_compose_bookmyshow_network",
+      "docker_compose_frontend_service",
+      "frontend_public_favicon_ticket_icon",
+      "plan_api_contract",
+      "plan_backend_tier",
+      "plan_bookmyshow_replica",
+      "plan_design_system",
+      "plan_frontend_tier",
+      "plan_prd",
+      "plan_tech_stack"
+    ],
+    "11": [
+      "frontend_components_button",
+      "frontend_components_button_button",
+      "frontend_components_button_buttonprops",
+      "frontend_components_button_buttonsize",
+      "frontend_components_button_buttonvariant",
+      "frontend_components_button_sizes",
+      "frontend_components_button_variants"
+    ],
+    "12": [
+      "plan_api_movie_theatres",
+      "plan_api_movies",
+      "plan_api_theatres",
+      "plan_movie_model",
+      "plan_slice_catalog",
+      "plan_theatre_model",
+      "todos_catalog"
+    ],
+    "13": [
+      "frontend_app_layout",
+      "frontend_app_layout_metadata",
+      "frontend_app_layout_rootlayout",
+      "frontend_components_header",
+      "frontend_components_header_header"
+    ],
+    "14": [
+      "frontend_app_page",
+      "frontend_app_page_landingpage"
+    ],
+    "15": [
+      "frontend_next_config",
+      "frontend_next_config_nextconfig"
+    ],
+    "16": [
+      "frontend_next_env_d",
+      "frontend_next_env_d_rationale_4"
+    ],
+    "17": [
+      "frontend_tailwind_config",
+      "frontend_tailwind_config_config"
+    ],
+    "18": [
+      "frontend_postcss_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.08695652173913043,
+    "1": 0.08695652173913043,
+    "2": 0.1,
+    "3": 0.11764705882352941,
+    "4": 0.16483516483516483,
+    "5": 0.14285714285714285,
+    "6": 0.14285714285714285,
+    "7": 0.15384615384615385,
+    "8": 0.18181818181818182,
+    "9": 0.32727272727272727,
+    "10": 0.23636363636363636,
+    "11": 0.2857142857142857,
+    "12": 0.38095238095238093,
+    "13": 0.5,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0
+  },
+  "gods": [
+    {
+      "id": "frontend_tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 17
+    },
+    {
+      "id": "backend_tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 13
+    },
+    {
+      "id": "backend_package_scripts",
+      "label": "scripts",
+      "degree": 5
+    },
+    {
+      "id": "frontend_package_scripts",
+      "label": "scripts",
+      "degree": 5
+    },
+    {
+      "id": "frontend_tsconfig_include",
+      "label": "include",
+      "degree": 5
+    },
+    {
+      "id": "backend_src_app_createapp",
+      "label": "createApp()",
+      "degree": 4
+    },
+    {
+      "id": "backend_tsconfig_exclude",
+      "label": "exclude",
+      "degree": 4
+    },
+    {
+      "id": "frontend_tsconfig_compileroptions_lib",
+      "label": "lib",
+      "degree": 4
+    },
+    {
+      "id": "plan_bookmyshow_replica",
+      "label": "BookMyShow Replica (full-stack cinema ticket-booking app)",
+      "degree": 4
+    },
+    {
+      "id": "plan_frontend_tier",
+      "label": "Frontend tier (Next.js App Router + TypeScript + Tailwind, React Context)",
+      "degree": 4
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Ticket favicon (SVG, brand red #e2382f stroke)",
+      "target": "BookMyShow brand design system (red/white/black, design-modern, light theme)",
+      "source_files": [
+        "frontend/public/favicon.svg",
+        "PLAN.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "implements",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (doc \u2194 image); connects across different repos/directories"
+    },
+    {
+      "source": "docker-compose service: backend (bookmyshow-backend, port 8000)",
+      "target": "Backend tier (Node.js + Express + TypeScript REST API)",
+      "source_files": [
+        "docker-compose.yml",
+        "PLAN.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "implements",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    },
+    {
+      "source": "docker-compose service: frontend (bookmyshow-frontend, port 3000)",
+      "target": "Frontend tier (Next.js App Router + TypeScript + Tailwind, React Context)",
+      "source_files": [
+        "docker-compose.yml",
+        "PLAN.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "implements",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    },
+    {
+      "source": "docker-compose service: backend (bookmyshow-backend, port 8000)",
+      "target": "GET /api/health \u2014 liveness, no DB",
+      "source_files": [
+        "docker-compose.yml",
+        "PLAN.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "Todo: scaffold \u2014 status done",
+      "target": "Slice 1: scaffold (fullstack skeleton + health endpoint)",
+      "source_files": [
+        "todos.yaml",
+        "PLAN.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "implements",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    }
+  ],
+  "tokens": {
+    "input": 5500,
+    "output": 2900
+  }
+}
