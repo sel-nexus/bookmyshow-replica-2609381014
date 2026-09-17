@@ -4,6 +4,10 @@ COPY package*.json ./
 RUN npm install --no-audit --no-fund
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
+# BACKEND_URL is read by next.config.js rewrites() at build time, so it must be
+# set here for the production rewrite to point at the backend service.
+ARG BACKEND_URL=http://backend:8000
+ENV BACKEND_URL=$BACKEND_URL
 RUN npm run build
 
 FROM node:22-alpine AS runner

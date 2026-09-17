@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   backend:
     build:
@@ -26,6 +24,8 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      args:
+        BACKEND_URL: http://backend:8000
     container_name: bookmyshow-frontend
     environment:
       - NODE_ENV=production
