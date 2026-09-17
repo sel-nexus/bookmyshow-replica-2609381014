@@ -83,7 +83,7 @@ export default function SuccessPage() {
 
         <Link
           href="/movies"
-          className="mt-8 inline-block rounded-full bg-primary-500 px-8 py-3 text-base font-semibold text-white shadow-card transition-all hover:bg-primary-600 hover:shadow-card-hover"
+          className="mt-8 inline-block rounded-full bg-primary-500 px-8 py-3 text-base font-semibold text-white shadow-card transition-[background-color,box-shadow] hover:bg-primary-600 hover:shadow-card-hover"
         >
           Book another ticket
         </Link>

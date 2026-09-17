@@ -25,7 +25,7 @@ export default function LandingPage() {
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
           <Link
             href="/login"
-            className="inline-flex items-center justify-center rounded-full bg-primary-500 px-8 py-3.5 text-base font-semibold text-white shadow-card transition-all duration-200 ease-out hover:bg-primary-600 hover:shadow-card-hover hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center rounded-full bg-primary-500 px-8 py-3.5 text-base font-semibold text-white shadow-card transition-[background-color,box-shadow,transform] duration-200 ease-out hover:bg-primary-600 hover:shadow-card-hover hover:-translate-y-0.5"
           >
             Book tickets
           </Link>

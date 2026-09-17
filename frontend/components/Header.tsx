@@ -43,7 +43,7 @@ export function Header() {
           </Link>
           <Link
             href="/login"
-            className="rounded-full bg-primary-500 px-4 py-2 text-sm font-semibold text-white shadow-card transition-all hover:bg-primary-600 hover:shadow-card-hover"
+            className="rounded-full bg-primary-500 px-4 py-2 text-sm font-semibold text-white shadow-card transition-[background-color,box-shadow] hover:bg-primary-600 hover:shadow-card-hover"
           >
             Sign in
           </Link>

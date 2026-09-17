@@ -21,7 +21,7 @@ export function Card({
 }: CardProps) {
   return (
     <div
-      className={`rounded-card border border-border bg-surface shadow-card transition-all duration-200 ease-out ${
+      className={`rounded-card border border-border bg-surface shadow-card transition-[box-shadow,transform] duration-200 ease-out ${
         interactive ? "hover:-translate-y-1 hover:shadow-card-hover" : ""
       } ${className}`}
       {...props}
