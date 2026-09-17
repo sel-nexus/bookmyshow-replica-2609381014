@@ -1,0 +1,44 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: bookmyshow-backend
+    environment:
+      - NODE_ENV=production
+      - PORT=8000
+      - CORS_ORIGIN=http://frontend:3000
+      - JWT_SECRET=dev-secret-change-in-production
+      - DATABASE_PATH=/app/data/bookmyshow.db
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8000/api/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - bookmyshow
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: bookmyshow-frontend
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=
+      - BACKEND_URL=http://backend:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - bookmyshow
+
+networks:
+  bookmyshow:
+    driver: bridge

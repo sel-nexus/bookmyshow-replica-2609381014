@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens — BookMyShow red/white/black. Light theme. */
+:root {
+  --color-background: 250 249 248; /* neutral-50 */
+  --color-surface: 255 255 255;
+  --color-surface-raised: 244 243 242; /* neutral-100 */
+  --color-foreground: 26 25 23; /* neutral-900 */
+  --color-foreground-muted: 125 120 117; /* neutral-500 */
+  --color-border: 230 228 227; /* neutral-200 */
+  --color-ring: 226 56 47; /* primary-500 */
+  --font-display: "Poppins", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-bold tracking-tight text-foreground;
+  }
+  a {
+    @apply text-primary-600 hover:text-primary-700 transition-colors;
+  }
+  input,
+  select,
+  textarea {
+    @apply block w-full rounded-lg border border-border bg-surface px-4 py-2.5 text-foreground placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-ring/40 focus:border-ring;
+  }
+  ::selection {
+    @apply bg-primary-500 text-white;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Honor reduced motion: collapse non-essential transitions. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
