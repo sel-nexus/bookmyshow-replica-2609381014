@@ -107,4 +107,31 @@ describe("BookingsService", () => {
       expect((err as Error).message).toBe("Theatre not found");
     }
   });
+
+  it("returns undefined when re-querying a non-existent booking id", () => {
+    expect(bookingsService.getBooking(999999)).toBeUndefined();
+  });
+
+  it("enforces the unique confirmation_id constraint", () => {
+    // Two bookings must never share a confirmation id.
+    const movie = moviesService.listMovies()[0];
+    const theatre = theatresService.listTheatres()[0];
+    const a = bookingsService.createBooking({
+      mobile: "9876543210",
+      movieId: movie.id,
+      theatreId: theatre.id,
+      seats: ["A1"],
+      totalPrice: 150,
+      paymentMethod: "card",
+    });
+    const b = bookingsService.createBooking({
+      mobile: "9876543210",
+      movieId: movie.id,
+      theatreId: theatre.id,
+      seats: ["A2"],
+      totalPrice: 150,
+      paymentMethod: "card",
+    });
+    expect(a.confirmationId).not.toBe(b.confirmationId);
+  });
 });

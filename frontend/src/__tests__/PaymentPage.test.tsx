@@ -2,8 +2,9 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import PaymentPage from "@/app/payment/page";
-import { BookingProvider } from "@/context/BookingContext";
+import { BookingProvider, useBooking } from "@/context/BookingContext";
 import * as api from "@/lib/api";
+import { useEffect } from "react";
 
 vi.mock("next/navigation", () => ({
   useRouter: () => ({ push: vi.fn(), replace: vi.fn() }),
@@ -16,13 +17,27 @@ vi.mock("@/lib/api", async (importOriginal) => {
 
 // Seed the booking context with a movie/theatre/seats so the page does not
 // redirect away during the test.
+function SeedDraft({ children }: { children: React.ReactNode }) {
+  const { setDraft } = useBooking();
+  useEffect(() => {
+    setDraft({
+      movie: { id: 1, title: "Paradise", poster: "", genre: "Drama", rating: "U/A" },
+      theatre: { id: 1, name: "Sandhya 70mm", location: "Hyderabad" },
+      seats: ["A1", "A2", "A3"],
+      totalPrice: 450,
+    });
+  }, [setDraft]);
+  return <>{children}</>;
+}
+
 function renderPayment() {
-  const utils = render(
+  return render(
     <BookingProvider>
-      <PaymentPage />
+      <SeedDraft>
+        <PaymentPage />
+      </SeedDraft>
     </BookingProvider>
   );
-  return utils;
 }
 
 describe("PaymentPage", () => {
@@ -54,5 +69,24 @@ describe("PaymentPage", () => {
   it("renders a Pay button showing the total", () => {
     renderPayment();
     expect(screen.getByRole("button", { name: /^pay/i })).toBeInTheDocument();
+  });
+
+  it("shows a validation error when card fields are submitted empty", async () => {
+    renderPayment();
+    // Card is the default method; submit without filling any field.
+    await userEvent.click(screen.getByRole("button", { name: /^pay/i }));
+    expect(
+      await screen.findByText(/valid card number/i)
+    ).toBeInTheDocument();
+    expect(api.createBooking).not.toHaveBeenCalled();
+  });
+
+  it("shows a validation error for an invalid UPI ID", async () => {
+    renderPayment();
+    await userEvent.click(screen.getByRole("button", { name: /upi/i }));
+    await userEvent.type(screen.getByLabelText(/upi id/i), "not-a-upi");
+    await userEvent.click(screen.getByRole("button", { name: /^pay/i }));
+    expect(await screen.findByText(/valid upi id/i)).toBeInTheDocument();
+    expect(api.createBooking).not.toHaveBeenCalled();
   });
 });

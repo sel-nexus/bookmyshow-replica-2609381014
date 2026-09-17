@@ -111,10 +111,14 @@ export function getMovieTheatres(movieId: number) {
   return request<{ theatres: Theatre[] }>(`/api/movies/${movieId}/theatres`);
 }
 
-/** Submit a booking and return its confirmation. */
-export function createBooking(payload: BookingPayload) {
+/** Submit a booking and return its confirmation. Requires the session token. */
+export function createBooking(payload: BookingPayload, token: string) {
   return request<{ success: true; booking: BookingConfirmation }>(
     "/api/bookings",
-    { method: "POST", body: JSON.stringify(payload) }
+    {
+      method: "POST",
+      headers: { Authorization: `Bearer ${token}` },
+      body: JSON.stringify(payload),
+    }
   );
 }

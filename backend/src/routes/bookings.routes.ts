@@ -2,6 +2,7 @@ import { Router, Request, Response, NextFunction } from "express";
 import { z } from "zod";
 import { bookingsService } from "../services/bookings.service";
 import { validateBody } from "../middleware/validate";
+import { requireAuth } from "../middleware/auth";
 
 const bookingSchema = z.object({
   mobile: z.string().regex(/^[0-9]{10}$/, "Mobile number must be 10 digits"),
@@ -22,6 +23,7 @@ export const bookingsRouter = Router();
  */
 bookingsRouter.post(
   "/",
+  requireAuth,
   validateBody(bookingSchema),
   (req: Request, res: Response, next: NextFunction): void => {
     try {

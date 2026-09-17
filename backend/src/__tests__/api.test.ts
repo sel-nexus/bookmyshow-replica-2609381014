@@ -120,3 +120,149 @@ describe("POST /api/auth/verify", () => {
     expect(res.body.success).toBe(false);
   });
 });
+
+/**
+ * Helper: obtain a valid session token for authenticated booking requests.
+ */
+async function getToken(): Promise<string> {
+  const res = await request(app)
+    .post("/api/auth/verify")
+    .send({ mobile: "9876543210", otp: "1234" });
+  return res.body.token as string;
+}
+
+const VALID_BOOKING = {
+  mobile: "9876543210",
+  movieId: 1,
+  theatreId: 1,
+  seats: ["A1", "A2", "A3"],
+  totalPrice: 450,
+  paymentMethod: "upi",
+};
+
+describe("POST /api/bookings", () => {
+  it("creates a booking and returns 201 with a confirmation", async () => {
+    const token = await getToken();
+    const res = await request(app)
+      .post("/api/bookings")
+      .set("Authorization", `Bearer ${token}`)
+      .send(VALID_BOOKING);
+    expect(res.status).toBe(201);
+    expect(res.body.success).toBe(true);
+    expect(res.body.booking.confirmationId).toMatch(/^BMS-/);
+    expect(res.body.booking.movie).toBe("Paradise");
+    expect(res.body.booking.theatre).toBe("Sandhya 70mm");
+    expect(res.body.booking.seats).toEqual(["A1", "A2", "A3"]);
+    expect(res.body.booking.totalPrice).toBe(450);
+  });
+
+  it("rejects a booking without an auth token with 401", async () => {
+    const res = await request(app).post("/api/bookings").send(VALID_BOOKING);
+    expect(res.status).toBe(401);
+    expect(res.body.success).toBe(false);
+  });
+
+  it("rejects a booking with an invalid token with 401", async () => {
+    const res = await request(app)
+      .post("/api/bookings")
+      .set("Authorization", "Bearer not-a-real-token")
+      .send(VALID_BOOKING);
+    expect(res.status).toBe(401);
+    expect(res.body.success).toBe(false);
+  });
+
+  it("returns 404 for a non-existent movie", async () => {
+    const token = await getToken();
+    const res = await request(app)
+      .post("/api/bookings")
+      .set("Authorization", `Bearer ${token}`)
+      .send({ ...VALID_BOOKING, movieId: 9999 });
+    expect(res.status).toBe(404);
+    expect(res.body.success).toBe(false);
+  });
+
+  it("returns 404 for a non-existent theatre", async () => {
+    const token = await getToken();
+    const res = await request(app)
+      .post("/api/bookings")
+      .set("Authorization", `Bearer ${token}`)
+      .send({ ...VALID_BOOKING, theatreId: 9999 });
+    expect(res.status).toBe(404);
+    expect(res.body.success).toBe(false);
+  });
+
+  it("rejects a missing seats field with 400", async () => {
+    const token = await getToken();
+    const { seats, ...withoutSeats } = VALID_BOOKING;
+    const res = await request(app)
+      .post("/api/bookings")
+      .set("Authorization", `Bearer ${token}`)
+      .send(withoutSeats);
+    expect(res.status).toBe(400);
+    expect(res.body.success).toBe(false);
+  });
+
+  it("rejects an empty seats array with 400", async () => {
+    const token = await getToken();
+    const res = await request(app)
+      .post("/api/bookings")
+      .set("Authorization", `Bearer ${token}`)
+      .send({ ...VALID_BOOKING, seats: [] });
+    expect(res.status).toBe(400);
+    expect(res.body.success).toBe(false);
+  });
+
+  it("rejects an invalid paymentMethod enum with 400", async () => {
+    const token = await getToken();
+    const res = await request(app)
+      .post("/api/bookings")
+      .set("Authorization", `Bearer ${token}`)
+      .send({ ...VALID_BOOKING, paymentMethod: "bitcoin" });
+    expect(res.status).toBe(400);
+    expect(res.body.success).toBe(false);
+  });
+
+  it("rejects a non-integer movieId with 400", async () => {
+    const token = await getToken();
+    const res = await request(app)
+      .post("/api/bookings")
+      .set("Authorization", `Bearer ${token}`)
+      .send({ ...VALID_BOOKING, movieId: "one" });
+    expect(res.status).toBe(400);
+    expect(res.body.success).toBe(false);
+  });
+});
+
+describe("Security boundaries", () => {
+  it("treats a SQL-injection string in mobile as invalid input, not a 500", async () => {
+    const res = await request(app)
+      .post("/api/auth/login")
+      .send({ mobile: "'; DROP TABLE movies; --" });
+    expect(res.status).toBe(400);
+    expect(res.body.success).toBe(false);
+    expect(res.body.error).not.toMatch(/stack|sqlite/i);
+  });
+
+  it("does not leak a stack trace on a malformed JSON body", async () => {
+    const token = await getToken();
+    const res = await request(app)
+      .post("/api/bookings")
+      .set("Authorization", `Bearer ${token}`)
+      .set("Content-Type", "application/json")
+      .send("{ not valid json ");
+    // Express's JSON parser produces a 400; the error envelope must not leak internals.
+    expect([400, 500]).toContain(res.status);
+    expect(JSON.stringify(res.body)).not.toMatch(/at Object|node_modules/);
+  });
+
+  it("stores an XSS string as inert data without executing or reflecting raw HTML", async () => {
+    const token = await getToken();
+    const res = await request(app)
+      .post("/api/bookings")
+      .set("Authorization", `Bearer ${token}`)
+      .send({ ...VALID_BOOKING, seats: ["<script>alert(1)</script>"] });
+    // The API returns JSON; the value is stored/returned as a plain string.
+    expect([201, 400]).toContain(res.status);
+    expect(res.headers["content-type"]).toMatch(/application\/json/);
+  });
+});

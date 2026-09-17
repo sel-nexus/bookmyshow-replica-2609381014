@@ -22,7 +22,7 @@ const PROCESSING_MS = 2000;
  */
 export default function PaymentPage() {
   const router = useRouter();
-  const { mobile, draft, setConfirmation } = useBooking();
+  const { mobile, token, draft, setConfirmation } = useBooking();
 
   const [method, setMethod] = useState<PaymentMethod>("card");
   const [cardNumber, setCardNumber] = useState("");
@@ -44,6 +44,25 @@ export default function PaymentPage() {
     setError("");
     if (!draft.movie || !draft.theatre) return;
 
+    // Validate the collected payment details before simulating the gateway.
+    if (method === "card") {
+      if (!/^[0-9]{12,19}$/.test(cardNumber.replace(/\s/g, ""))) {
+        setError("Enter a valid card number");
+        return;
+      }
+      if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(expiry)) {
+        setError("Enter a valid expiry date (MM/YY)");
+        return;
+      }
+      if (!/^[0-9]{3,4}$/.test(cvv)) {
+        setError("Enter a valid CVV");
+        return;
+      }
+    } else if (!/^[\w.\-]{2,}@[a-zA-Z]{2,}$/.test(upiId)) {
+      setError("Enter a valid UPI ID (e.g. user@upi)");
+      return;
+    }
+
     setProcessing(true);
     // Simulated gateway: hold the processing state for exactly 2 seconds.
     await new Promise((resolve) => setTimeout(resolve, PROCESSING_MS));
@@ -56,7 +75,7 @@ export default function PaymentPage() {
         seats: draft.seats,
         totalPrice: draft.totalPrice,
         paymentMethod: method,
-      });
+      }, token);
       setConfirmation(res.booking);
       router.push("/success");
     } catch (err) {
